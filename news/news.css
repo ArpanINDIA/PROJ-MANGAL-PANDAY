@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  /* display: flex; */
+    background-color: #04AA6D;
+    
+}
+.topnav {
+    overflow: hidden;
+    background-color: #3470a8;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;}
+    h1{
+      color: #020202;
+      font-size: 50px;
+      font-weight: bold;
+      font-family: monospace;
+      letter-spacing: 7px;
+      cursor: pointer;
+      text-align: center;
+    }
+    h1 span{
+      transition: .5s linear
+    }
+    h1:hover span:nth-child(1){
+      margin-right: 5px
+    }
+    h1:hover span:nth-child(1):after{
+      content: "'";
+    }
+    h1:hover span:nth-child(2){
+      margin-left: 30px
+    }
+    h1:hover span{
+      color: #fff;
+      text-shadow: 0 0 10px #fff,
+                   0 0 20px #fff, 
+                   0 0 40px #fff;
+    }
+    .ma{
+      /* background-color: rgb(70, 101, 136); */
+      background-image: url(/wp6821994.jpg);
+      width: auto;
+      height: auto;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+  .box{
+    flex-grow: calc(center);
+    font-size: 15px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin: 0 15px;
+  }
+  
+    .appi{
+      display: flex;
+      margin: 0 15px;
+      width: auto
+          ;
+      height: auto;
+      color: #0b2c5e;
+background-color: rgb(234, 238, 238)
+
+    }

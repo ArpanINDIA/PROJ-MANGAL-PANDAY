@@ -1,0 +1,81 @@
+*{margin: 0px;
+padding: 0px;
+ }
+ body{
+     background-color: black;
+     cursor: crosshair;
+     text-align: center;
+ }
+ button{
+   color: rgba(139, 235, 235, 0.596);
+   text-align: 0 px left;
+   background-color: black;
+
+ }
+ .img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  /* font-family: Copperplate, Papyrus, fantasy; */
+  text-align: center;
+}
+/* Google Fonts */
+
+/* Global */
+
+
+.line-1{
+  color: aliceblue;
+    position: relative;
+    top: 50%;  
+    width: 7.5em;
+    margin: 0 auto;
+    border-right: 2px solid rgb(255, 255, 255);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);  
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(30) 0s 1 normal both,
+  blinkTextCursor 500ms steps(30)infinite normal;
+  
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 7.5em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgb(255, 0, 0);}
+  to{border-right-color: transparent;}
+}
+/* 
+ /* */
+ 
+.para-1{
+  color: aliceblue;
+    position: relative;
+    top: 50%;  
+    width:7em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0);
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(50%);  
+    font-family: "Courier New", Courier, monospace;
+  
+    animation: para-1 5s steps(30) 4s 1 normal both,
+    blinkTextCursor 500ms steps(30)infinite normal;
+
+}
+@keyframes para-1{
+  from{width:0em;}
+  to{width:7em;}
+}
