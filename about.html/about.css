@@ -1,26 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300");
 *{margin: 0px;
-padding: 0px;
+  padding: 0px;
  }
- body{
+ /* body{
      background-color: black;
      cursor: crosshair;
      text-align: center;
- }
- button{
-   color: rgba(139, 235, 235, 0.596);
-   text-align: 0 px left;
-   background-color: black;
-
- }
- .img{
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  /* font-family: Copperplate, Papyrus, fantasy; */
+     
+ } */
+ body {
+  cursor: crosshair;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5em;
+  min-height: 100vh;
+  background-image: (
+    radial-gradient(#120c2f 1px, transparent 0 20px),
+    radial-gradient(#120c2f 1px, transparent 0 20px)
+  );
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-color: #080619;
 }
-/* Google Fonts */
+
+ 
+
+ 
+ :root {
+   --corner-distance: 14px;
+   --inside-offset-block: 4px;
+   --inside-offset-inline: 1px;
+ }
+ 
+ .button-wrapper {
+   filter: drop-shadow(0 8px 8px var(--shadow-color));
+   transition-property: filter;
+   transition-duration: 0.4s;
+   will-change: filter;
+ 
+   @media (hover: hover) {
+     .button-wrapper:hover {
+       filter: drop-shadow(0 12px 12px var(--shadow-color));
+     }
+   }
+ 
+   &.primary {
+     --shadow-color: rgb(36 25 95 / 0.8);
+   }
+ 
+   &.secondary {
+     --shadow-color: rgb(255 255 255 / 0.4);
+   }
+ }
+ 
+ .button {
+   position: relative;
+   padding: 12px 40px;
+   clip-path: polygon(
+     var(--corner-distance) 0,
+     calc(100% - var(--corner-distance)) 0,
+     var(--corner-distance) 0,
+     calc(100% - var(--corner-distance)) 0,
+     100% 50%,
+     calc(100% - var(--corner-distance)) 100%,
+     var(--corner-distance) 100%,
+     0 50%
+   );
+   text-align: center;
+   font-family: "IBM Plex Mono", monospace;
+   color: #fff;
+   transition-property: transform;
+   transition-duration: 0.4s;
+   transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+ 
+   @media (hover: hover) {
+     &:hover {
+       transform: translateY(-4px);
+     }
+   }
+ 
+   &:focus-visible {
+     transform: translateY(-4px);
+   }
+ 
+   &:active {
+     transform: translateY(-4px) scale(0.94);
+   }
+ 
+   .button-wrapper.primary & {
+     background-image: linear-gradient(to bottom, #29224d, #776cc9);
+   }
+ 
+   .button-wrapper.secondary & {
+     background-image: linear-gradient(to bottom, #8a8894, #c8c7ca);
+   }
+ }
+ 
+ .button-inner-wrapper {
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   filter: blur(2px);
+ }
+ 
+ .button-inner {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   top: 0;
+   width: 100%;
+     clip-path: polygon(
+       var(--corner-distance) var(--inside-offset-block),
+     calc(100% - var(--corner-distance)) var(--inside-offset-block),
+     calc(100% - var(--inside-offset-inline)) 50%,
+     calc(100% - var(--corner-distance)) calc(100% - var(--inside-offset-block)),
+     var(--corner-distance) calc(100% - var(--inside-offset-block)),
+     var(--inside-offset-inline) 50%
+     var(--corner-distance) calc(100% - var(--inside-offset-block)),
+     var(--inside-offset-inline) 50%
+   );
+   transition-property: transform;
+   transition-duration: 0.4s;
+   will-change: transform;
+ 
+   @media (hover: hover) {
+     .button:hover & {
+       transform: scale(0.96);
+     }
+   }
+ 
+   .button:focus-visible & {
+     transform: scale(0.96);
+   }
+ 
+   .button-wrapper.primary & {
+     background-image: linear-gradient(to bottom, #080616, #3e3861);
+   }
+ 
+   .button-wrapper.secondary & {
+     background-image: linear-gradient(to right, #67666e, #0f0d21);
+   }
+ }
+ 
+ 
+ 
 
 /* Global */
 
@@ -71,7 +201,7 @@ padding: 0px;
     transform: translateY(50%);  
     font-family: "Courier New", Courier, monospace;
   
-    animation: para-1 5s steps(30) 4s 1 normal both,
+    animation: para-1 3s steps(30) 4s 1 normal both,
     blinkTextCursor 500ms steps(30)infinite normal;
 
 }
