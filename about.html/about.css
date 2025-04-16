@@ -18,7 +18,7 @@
   column-gap: 1.5em;
   min-height: 100vh;
   background-image: (
-    radial-gradient(#120c2f 1px, transparent 0 20px),
+    radial-gradient(#2200cd 1px, transparent 0 20px),
     radial-gradient(#120c2f 1px, transparent 0 20px)
   );
   background-size: 40px 40px;
@@ -26,9 +26,6 @@
   background-color: #080619;
 }
 
- 
-
- 
  :root {
    --corner-distance: 14px;
    --inside-offset-block: 4px;
